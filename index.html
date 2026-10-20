@@ -192,6 +192,35 @@ footer .in{padding-block:24px;display:flex;justify-content:space-between;flex-wr
 }
 @media (max-width:480px){.links{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+/* Bolder reading weight */
+body{font-weight:500}
+h2{font-weight:700}
+.lede{color:#e3e8ef;font-weight:500}
+.sec-head p,.role ul,.about-body,.svc-list span,.clip p{color:#2b3442}
+.role h3,.clip h3{font-weight:700}
+.about .big{font-weight:700}
+.quote p{font-weight:700;color:var(--navy)}
+.quote cite{font-weight:700;color:var(--ink);font-size:16px;letter-spacing:.02em}
+.brand blockquote{font-weight:700}
+.brand p{color:#e3e8ef}
+
+/* Self-improvement platform */
+.plat{background:var(--paper);border-block:1px solid var(--line)}
+.pill3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.pill{border:1px solid var(--line);background:var(--ivory);padding:30px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.pill .n{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--brass)}
+.pill h3{font-family:var(--display);font-weight:700;font-size:28px;color:var(--navy)}
+.pill p{color:#2b3442;font-size:16px}
+.chans{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.chans a{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border:1px solid var(--navy);color:var(--navy);text-decoration:none;font-weight:700;font-size:15px;transition:background .2s,color .2s}
+.chans a:hover{background:var(--navy);color:#fff}
+.chans small{font-weight:500;opacity:.75}
+.journal{margin-top:28px;background:var(--navy);color:#fff;padding:clamp(24px,4vw,40px);display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center}
+.journal .tag{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--navy);background:#d4b675;padding:8px 14px;white-space:nowrap}
+.journal h3{font-family:var(--display);font-weight:700;font-size:clamp(24px,3vw,32px)}
+.journal p{color:#e3e8ef;margin-top:8px;max-width:60ch}
+@media (max-width:860px){.pill3{grid-template-columns:1fr}.journal{grid-template-columns:1fr;gap:16px}.journal .tag{justify-self:start}}
 </style>
 </head>
 <body>
@@ -199,7 +228,7 @@ footer .in{padding-block:24px;display:flex;justify-content:space-between;flex-wr
 
 <nav><div class="in">
   <div class="mono">J<span>A</span>D</div>
-  <ul><li><a href="#about">About</a></li><li><a href="#experience">Experience</a></li><li><a href="#press">Press</a></li><li><a href="#connect">Connect</a></li></ul>
+  <ul><li><a href="#about">About</a></li><li><a href="#experience">Experience</a></li><li><a href="#press">Press</a></li><li><a href="#platform">Platform</a></li><li><a href="#connect">Connect</a></li></ul>
 </div></nav>
 
 <header class="hero"><div class="in">
@@ -339,6 +368,31 @@ footer .in{padding-block:24px;display:flex;justify-content:space-between;flex-wr
       <div><b>Can't Hurt Me</b><span>David Goggins</span></div>
       <div><b>Atomic Habits</b><span>James Clear</span></div>
       <div><b>Discipline Is Destiny</b><span>Ryan Holiday</span></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec plat" id="platform"><div class="in">
+  <div class="sec-head">
+    <span class="eyebrow">The platform</span>
+    <h2>Self-improvement, <em>in every way.</em></h2>
+    <p>On YouTube, TikTok, and Instagram I document what it takes to get better every day: in how I think, how I train, and how I show up professionally.</p>
+  </div>
+  <div class="pill3">
+    <article class="pill"><span class="n">Mentality</span><h3>Think clearly.</h3><p>Daily journaling, honest reflection, and lessons from the books that shape how I think. Discipline, focus, and how to handle setbacks.</p></article>
+    <article class="pill"><span class="n">Fitness</span><h3>Train hard.</h3><p>Muay Thai, wrestling, and lifting, with a long-term goal of finishing an Ironman. Real progress, documented without shortcuts.</p></article>
+    <article class="pill"><span class="n">Professionalism</span><h3>Show up.</h3><p>Building a career where business meets law: internships, networking, leadership, and dressing the part.</p></article>
+  </div>
+  <div class="chans">
+    <a href="https://www.youtube.com/@Master_Drew" target="_blank" rel="noopener">YouTube <small>@Master_Drew</small></a>
+    <a href="https://www.tiktok.com/@joseph_alexander_drew" target="_blank" rel="noopener">TikTok <small>@joseph_alexander_drew</small></a>
+    <a href="https://www.instagram.com/josephalexanderdrew/" target="_blank" rel="noopener">Instagram <small>@josephalexanderdrew</small></a>
+  </div>
+  <div class="journal">
+    <span class="tag">Coming soon</span>
+    <div>
+      <h3>A guided journal for building discipline</h3>
+      <p>Built from nearly 2,000 days of my own journaling. Daily prompts that help you reflect, set goals, and follow through. Follow along on Instagram for launch updates.</p>
     </div>
   </div>
 </div></section>
