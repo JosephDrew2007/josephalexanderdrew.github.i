@@ -12,7 +12,7 @@
 {"@context":"https://schema.org","@type":"Person","name":"Joseph Alexander Drew","alternateName":["Joseph Drew","Joseph A. Drew"],"jobTitle":"Founder & President, UConn Project Cinema","description":"Marketing student at the University of Connecticut on the path to law school.","alumniOf":[{"@type":"CollegeOrUniversity","name":"University of Connecticut"},{"@type":"HighSchool","name":"Fairfield Warde High School"}],"homeLocation":{"@type":"Place","name":"Fairfield, Connecticut"},"award":["Connecticut General Assembly Official Citation (2024)","Eagle Scout Award (2024)","DECA Award of Excellence","American Legion Community Service Award"],"sameAs":["https://www.linkedin.com/in/josephalexanderdrew/","https://www.instagram.com/josephalexanderdrew/","https://www.tiktok.com/@joseph_alexander_drew","https://www.youtube.com/@Master_Drew"]}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Source+Serif+4:ital,opsz,wght@0,8..60,600;0,8..60,700;1,8..60,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,600;0,8..60,700;1,8..60,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
 <style>
 /* Layout: tailored menswear lookbook. Navy bands for the pitch, ivory pages for proof, brass only on achievements. Employer-first: value, proof, then story. */
 :root{
@@ -332,6 +332,38 @@ h1 em{font-style:normal;font-weight:400;color:var(--brass-lt);display:block}
 
 .copy{background:none;border:1px solid rgba(255,255,255,.35);color:#fff;font:700 13px var(--sans);padding:6px 12px;border-radius:2px;cursor:pointer;margin-left:10px;transition:border-color .2s}
 .copy:hover{border-color:var(--brass-lt)}
+
+/* ===== Calm, professional pass ===== */
+h1{font-family:var(--display);font-weight:700;text-transform:none;font-size:clamp(46px,6.4vw,84px);line-height:1.02;letter-spacing:-.015em}
+h1 em{display:block;font-style:italic;font-weight:600;color:var(--brass-lt)}
+.hero .eyebrow{letter-spacing:.22em}
+.proof b{font-family:var(--display);font-weight:700;font-size:clamp(34px,3.8vw,46px);letter-spacing:-.01em}
+.statement{background:var(--navy);border-top:1px solid rgba(212,182,117,.25)}
+.statement .in{padding-block:clamp(52px,7vw,84px)}
+.statement h2{font-family:var(--display);font-weight:700;text-transform:none;font-size:clamp(40px,5.2vw,64px);line-height:1.05;letter-spacing:-.01em}
+.statement h2 em{font-style:italic;font-weight:600}
+.statement .big{font-family:var(--display);font-weight:700;font-size:clamp(44px,4.6vw,58px)}
+.val .k::before{font-family:var(--display);font-weight:700;font-size:18px;color:var(--brass)}
+.val:hover,.case:hover,.cert:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(15,29,51,.07);border-color:var(--line)}
+.case:hover .ph img{transform:scale(1.02)}
+.link-row:hover{background:rgba(212,182,117,.05)}
+.lift{transform:translateY(12px);transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.sec{padding-block:clamp(72px,8vw,104px)}
+.sec-head{margin-bottom:48px}
+.sec-head p,.val p,.case dl,.role ul{color:#3a4350}
+.portrait .frame{box-shadow:0 0 0 1px rgba(212,182,117,.7),0 24px 50px rgba(0,0,0,.3)}
+.hero .glow{display:none}
+
+.statement{background:var(--paper);color:var(--navy);border-block:1px solid var(--line)}
+.statement h2{color:var(--navy)}
+.statement h2 em{color:var(--brass)}
+.statement-side{border-left-color:var(--line)}
+.statement .big{color:var(--brass)}
+.statement .lbl{color:var(--muted)}
+.statement p{color:#3a4350}
+.statement a{color:var(--navy);border-bottom-color:var(--brass)}
+.statement a:hover{color:var(--brass)}
+@media (max-width:860px){.statement-side{border-top-color:var(--line)}}
 </style>
 </head>
 <body>
@@ -684,15 +716,6 @@ h1 em{font-style:normal;font-weight:400;color:var(--brass-lt);display:block}
 <script>
 (function(){
   var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  // hero spotlight + gentle portrait tilt
-  var hero=document.querySelector('.hero'),frame=document.querySelector('.portrait .frame');
-  if(hero&&!reduce&&window.matchMedia('(pointer:fine)').matches){
-    var g=document.createElement('div');g.className='glow';hero.insertBefore(g,hero.firstChild);
-    hero.addEventListener('mousemove',function(e){var r=hero.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
-      hero.style.setProperty('--mx',(x*100)+'%');hero.style.setProperty('--my',(y*100)+'%');
-      if(frame)frame.style.transform='perspective(900px) rotateY('+((x-.5)*6)+'deg) rotateX('+(-(y-.5)*6)+'deg)';});
-    hero.addEventListener('mouseleave',function(){if(frame)frame.style.transform='';});
-  }
   // marketing / law lens
   var rows=document.querySelector('.links3'),lens=document.getElementById('lens'),note=document.getElementById('lensNote');
   var notes={both:'Marketing and law, side by side.',marketing:'How I read people and shape the message.',law:'How I make sure the message holds up.'};
